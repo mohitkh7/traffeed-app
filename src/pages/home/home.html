@@ -1,14 +1,100 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="var">
     <ion-title>
-      Ionic Blank
+      Indore Traffic Updates
     </ion-title>
+    <!--
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addUpdate()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    -->
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content >
+
+	<!--
+  <ion-card *ngFor="let update of updates | async  ">
+    <hr class="bg-{{update.stripcolor}}" />
+        <ion-item color="light">
+          <ion-avatar item-left>
+            <img src="assets/images/default.jpg" />
+          </ion-avatar>
+          <h3>{{update.title}}</h3>
+          <ion-note item-right>
+          {{showTime(update.time)}}
+          </ion-note>
+        </ion-item>
+        <ion-card-content>
+          <br />
+          {{update.message}}
+        </ion-card-content>
+  </ion-card>
+	-->
+	<ion-card >
+    <hr class="bg-red" />
+  	<ion-item color="light">
+  		<ion-avatar item-left>
+  			<img src="assets/images/diversion.jpg" />
+  		</ion-avatar>
+  		<h3>Diversion Alet</h3>
+  		<ion-note item-right>
+  		3 Hour ago
+  		</ion-note>
+  	</ion-item>
+  	<ion-card-content>
+	  	<br />
+	    From tomorrow i.e. 4 January 2017, Jawahar Marg from Malharganj to Rajwada will be <b>one way.</b>
+	    Traffic moving from Malarganj to Rajwada will be diverted to another route.
+  	</ion-card-content>
+	</ion-card>
+
+
+	<ion-card >
+    <hr class="bg-yellow" />
+  	<ion-item color="light">
+  		<ion-avatar item-left>
+  			<img src="assets/images/progress.png" />
+  		</ion-avatar>
+  		<h3>Work in Progress</h3>
+  		<ion-note item-right>
+  		11 Hour ago
+  		</ion-note>
+  	</ion-item>
+  	<ion-card-content>
+	  	<br />
+	    Repairing work is in progress near <i>palasia bridge.</i> Caution suggested.
+  	</ion-card-content>
+	</ion-card>
+
+	<ion-card >
+    <hr class="bg-green" />
+  	<ion-item color="light">
+  		<ion-avatar item-left>
+  			<img src="assets/images/default.jpg" />
+  		</ion-avatar>
+  		<h3>Awarness</h3>
+  		<ion-note item-right>
+  		1 Hour ago
+  		</ion-note>
+  	</ion-item>
+
+  	<img src="assets/images/aware.jpeg" />
+  	<ion-card-content>
+	  	<br />
+	    Follow Traffic rule.
+  	</ion-card-content>
+	</ion-card>
+
+	
+	<ion-card>
+  	<ion-card-header>
+    	Header
+  	</ion-card-header>
+  	<ion-card-content>
+    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+  	</ion-card-content>
+	</ion-card>
 </ion-content>
