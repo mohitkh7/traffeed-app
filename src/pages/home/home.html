@@ -3,19 +3,19 @@
     <ion-title>
       Indore Traffic Updates
     </ion-title>
-    <!--
+    
     <ion-buttons end>
       <button ion-button icon-only (click)="addUpdate()">
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
-    -->
+  
   </ion-navbar>
 </ion-header>
 
 <ion-content >
 
-	<!--
+	
   <ion-card *ngFor="let update of updates | async  ">
     <hr class="bg-{{update.stripcolor}}" />
         <ion-item color="light">
@@ -32,7 +32,7 @@
           {{update.message}}
         </ion-card-content>
   </ion-card>
-	-->
+
 	<ion-card >
     <hr class="bg-red" />
   	<ion-item color="light">
