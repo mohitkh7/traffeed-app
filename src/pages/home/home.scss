@@ -3,23 +3,16 @@ page-home {
 		height:5px !important;
 		margin:0px;
 	}
-	.bg-red{
-		background-color:#ff0000;
+	.bg-high{
+		background-color:#f77c02; //orange
 	}
 
-	.bg-orange{
-		background-color:#f77c02;
+	.bg-medium{
+		background-color:#fcfc19; //yellow
 	}
 
-	.bg-yellow{
-		background-color:#fcfc19;
+	.bg-low{
+		background-color:#00ff00; //green
 	}
 
-	.bg-green{
-		background-color:#00ff00;
-	}
-
-	.bg-blue{
-		background-color:#76c6f7;
-	}
 }
