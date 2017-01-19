@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.appocrafts.traffeed" version="2.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Traffeed</name>
+<widget id="com.appocrafts.traffeed" version="2.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>TrafFeed</name>
     <description>An app to solve indore traffic issues.</description>
     <author email="mohitkh7@gmail.com" href="http://appocrafts.tk/">Team Appocrafts</author>
     <content src="index.html" />
@@ -20,6 +20,12 @@
     </platform>
     <!-- Icon -->
     <icon src="resources/t5.png" />
+    <!--splash-->
+    <gap:splash gap:density="ldpi" gap:platform="android" src="sp.png" />
+    <gap:splash gap:density="mdpi" gap:platform="android" src="sp.png" />
+    <gap:splash gap:density="hdpi" gap:platform="android" src="sp.png" />
+    <gap:splash gap:density="xhdpi" gap:platform="android" src="sp.png" />
+
     
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
