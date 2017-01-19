@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 import{ AngularFire, FirebaseListObservable } from 'angularfire2';
 
@@ -15,15 +16,23 @@ import{ AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class AddFeed {
 
+  addFeedForm: FormGroup;
 	location;
 	type="Traffic Jam";
 	message;
 	intensity="medium";
 	user_updates: FirebaseListObservable<any>;
 
-  constructor(public navCtrl: NavController, af: AngularFire, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, af: AngularFire, public navParams: NavParams, public formBuilder:FormBuilder) {
   	//for updates to user updates
     this.user_updates=af.database.list('/user_updates');
+    this.addFeedForm=formBuilder.group({
+      location:['',Validators.compose([Validators.required])],
+      message:['',Validators.compose([Validators.required])],
+      type:['',Validators.compose([Validators.required])],
+      intensity:['',Validators.compose([Validators.required])]
+
+    });
 
 
   }

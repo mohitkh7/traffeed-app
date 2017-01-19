@@ -15,41 +15,43 @@
 
 <ion-content>
 	<ion-list>
-		<ion-item>
-			<ion-label floating>Location</ion-label>
-    	<ion-input type="text" [(ngModel)]="location"></ion-input>
-		</ion-item>
+		<form [formGroup]="addFeedForm">
+			<ion-item>
+				<ion-label floating>Location</ion-label>
+	    	<ion-input formControlName="location" type="text" [(ngModel)]="location"></ion-input>
+			</ion-item>
 
-		<ion-item>
-			<ion-label>Type</ion-label>
-			<ion-select [(ngModel)]="type">
-				<ion-option value="Traffic Jam" selected>Traffic Jam</ion-option>
-    		<ion-option value="Heavy Traffic">Heavy Traffic</ion-option>
-    		<ion-option value="Road Diversion">Road Diversion</ion-option>
-    		<ion-option value="VIP Convey">VIP Convey</ion-option>
-    		<ion-option value="Work in Progress">Work in Progress</ion-option>
-    		<ion-option value="Notice">Notice</ion-option>
-    		<ion-option value="awarness">Awarness</ion-option>
-    		<ion-option value="other">Other</ion-option>
-			</ion-select>
-		</ion-item>
+			<ion-item>
+				<ion-label>Type</ion-label>
+				<ion-select formControlName="type" [(ngModel)]="type">
+					<ion-option value="Traffic Jam" selected>Traffic Jam</ion-option>
+	    		<ion-option value="Heavy Traffic">Heavy Traffic</ion-option>
+	    		<ion-option value="Road Diversion">Road Diversion</ion-option>
+	    		<ion-option value="VIP Convey">VIP Convey</ion-option>
+	    		<ion-option value="Rally">Rally</ion-option>
+	    		<ion-option value="Work in Progress">Work in Progress</ion-option>
+	    		<ion-option value="Notice">Notice</ion-option>
+	    		<ion-option value="Awarness">Awarness</ion-option>
+	    		<ion-option value="Other">Other</ion-option>
+				</ion-select>
+			</ion-item>
 
-		<ion-item>
-			<ion-label floating>Message</ion-label>
-    	<ion-textarea [(ngModel)]="message"></ion-textarea>
-		</ion-item>
+			<ion-item>
+				<ion-label floating>Message</ion-label>
+	    	<ion-textarea formControlName="message" [(ngModel)]="message"></ion-textarea>
+			</ion-item>
 
-		<ion-item>
-			<ion-label>Intensity</ion-label>
-    	<ion-select [(ngModel)]="intensity">
-				<ion-option value="high">High</ion-option>
-    		<ion-option value="medium" selected>Medium</ion-option>
-    		<ion-option value="low">Low</ion-option>
-			</ion-select>
-		</ion-item>
-
+			<ion-item>
+				<ion-label>Intensity</ion-label>
+	    	<ion-select formControlName="intensity" [(ngModel)]="intensity">
+					<ion-option value="high">High</ion-option>
+	    		<ion-option value="medium" selected>Medium</ion-option>
+	    		<ion-option value="low">Low</ion-option>
+				</ion-select>
+			</ion-item>
+		</form>
 	</ion-list>
 	<div text-center>
-		<button ion-button color="var" (click)="addFeed()">Send</button>
+		<button ion-button color="var" [disabled]="!this.addFeedForm.valid" (click)="addFeed()">Send</button>
 	</div>
 </ion-content>

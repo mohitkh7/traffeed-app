@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import {AddFeed} from '../pages/add-feed/add-feed';
 
 
+
 @Component({
   templateUrl: 'app.html'
 })

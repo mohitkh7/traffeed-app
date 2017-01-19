@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="var">
     <ion-title>
-      Traffeed
+      TraFFeed
     </ion-title>
     
     <ion-buttons end>
@@ -16,11 +16,11 @@
 <ion-content >
 
 	
-  <ion-card *ngFor="let update of updates | async  ">
+  <ion-card *ngFor="let update of updates | async  " (click)="showOnMap(update)">
     <hr class="bg-{{update.intensity}}" />
     <ion-item color="light">
       <ion-avatar item-left>
-        <img src="assets/images/default.jpg" />
+        <img src="assets/images/{{update.type}}.png" />
       </ion-avatar>
       <h3>{{update.location}}</h3>
       <ion-note item-right>
@@ -33,15 +33,10 @@
       {{update.message}} 
     </ion-card-content>
   </ion-card>
-
 	
-
-
-
-
 	<ion-card >
     <hr class="bg-low" />
-  	<ion-item color="light">
+  	<!--<ion-item color="light">
   		<ion-avatar item-left>
   			<img src="assets/images/default.jpg" />
   		</ion-avatar>
@@ -49,17 +44,17 @@
   		<ion-note item-right>
   		Default
   		</ion-note>
-  	</ion-item>
+  	</ion-item>-->
 
   	<img src="assets/images/aware.jpeg" />
-  	<ion-card-content>
+  	<ion-card-content >
 	    Follow Traffic rule.
   	</ion-card-content>
 	</ion-card>
 
 	<ion-card >
     <hr class="bg-low" />
-  	<ion-item color="light">
+  	<!--<ion-item color="light">
   		<ion-avatar item-left>
   			<img src="assets/images/default.jpg" />
   		</ion-avatar>
@@ -67,14 +62,14 @@
   		<ion-note item-right>
   		Default
   		</ion-note>
-  	</ion-item>
+  	</ion-item>-->
 
   	<img src="assets/images/ped.jpeg" />
 	</ion-card>
 
 	<ion-card >
     <hr class="bg-low" />
-  	<ion-item color="light">
+  	<!--<ion-item color="light">
   		<ion-avatar item-left>
   			<img src="assets/images/default.jpg" />
   		</ion-avatar>
@@ -82,7 +77,7 @@
   		<ion-note item-right>
   		Default
   		</ion-note>
-  	</ion-item>
+  	</ion-item>-->
 
   	<img src="assets/images/talk.jpg" />
   	<ion-card-content>

@@ -3,6 +3,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AddFeed } from '../pages/add-feed/add-feed';
+import {ShowOnMap} from '../pages/show-on-map/show-on-map';
 
 import { Data } from '../providers/data';
 
@@ -22,7 +23,8 @@ export const firebaseConfig={
   declarations: [
     MyApp,
     HomePage,
-    AddFeed
+    AddFeed,
+    ShowOnMap
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -32,7 +34,8 @@ export const firebaseConfig={
   entryComponents: [
     MyApp,
     HomePage,
-    AddFeed
+    AddFeed,
+    ShowOnMap
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Data]
 })

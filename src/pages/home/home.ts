@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 import{ AngularFire, FirebaseListObservable } from 'angularfire2';
 
 import {AddFeed} from '../add-feed/add-feed';
+import {ShowOnMap} from '../show-on-map/show-on-map';
+
+declare var google;
 
 @Component({
   selector: 'page-home',
@@ -14,8 +17,7 @@ export class HomePage {
 
 	updates: FirebaseListObservable<any>;
 	user_updates: FirebaseListObservable<any>;
-	constructor(public navCtrl: NavController, af: AngularFire, public alertCtrl: AlertController) {
-		//this.updates=af.database.list('/updates').map(items => items.sort((a, b) => a.time - b.time)) as FirebaseListObservable<any[]>;;
+	constructor(public navCtrl: NavController, af: AngularFire) {
 
 		//for offcial updates
 		this.updates = af.database.list('/updates/', {
@@ -27,54 +29,17 @@ export class HomePage {
 
     	//for updates from user
     	this.user_updates=af.database.list('/user_updates');
+	}
 
-
-
+	ionViewDidLoad(){
+		
 	}
 
 	addUpdate(){
-		/*//getting present time as form of date
-		let t=(new Date()).toISOString();
-		//date=dt.toISOString();
-		let prompt = this.alertCtrl.create({
-	    title: 'Traffic Updates ',
-	    message: "Enter details of traffic update ",
-	    inputs: [
-	      {
-	        name: 'location',
-	        placeholder: 'Location'
-	      },
-	      {
-	      	name: 'message',
-	      	placeholder: 'Message'
-	      },
-	      {
-	      	name: 'intensity',
-	      	placeholder: 'Alert Intensity : high, medium and low'
-	      }
-	    ],
-	    buttons: [
-	      {
-	        text: 'Cancel',
-	        handler: data => {
-	          console.log('Cancel clicked');
-	        }
-	      },
-	      {
-	        text: 'Save',
-	        handler: data => {
-	          this.user_updates.push({
-	            title: data.location,
-	            message: data.message,
-	            intensity: data.intensity,
-	            time:t,
-	          });
-	        }
-	      }
-	    ]
-	  });
-		prompt.present();*/
 		this.navCtrl.push(AddFeed);
+	}
+	showOnMap(Obj){
+		this.navCtrl.push(ShowOnMap,{feedObj:Obj});
 	}
 
 	//function to calculate time
