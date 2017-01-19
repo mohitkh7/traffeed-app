@@ -19,10 +19,8 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <!-- Icon -->
-    <icon gap:density="ldpi" gap:platform="android" src="resources/t5.png" />
-    <icon gap:density="mdpi" gap:platform="android" src="resources/t5.png" />
-    <icon gap:density="hdpi" gap:platform="android" src="resources/t5.png" />
-    <icon gap:density="xhdpi" gap:platform="android" src="resources/t5.png" />
+    <icon src="resources/t5.png" />
+    
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
