@@ -21,11 +21,7 @@
     <!-- Icon -->
     <icon src="resources/t5.png" />
     <!--splash-->
-    <gap:splash gap:density="ldpi" gap:platform="android" src="sp.png" />
-    <gap:splash gap:density="mdpi" gap:platform="android" src="sp.png" />
-    <gap:splash gap:density="hdpi" gap:platform="android" src="sp.png" />
-    <gap:splash gap:density="xhdpi" gap:platform="android" src="sp.png" />
-
+    <splash src="resources/sp.png" />
     
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
