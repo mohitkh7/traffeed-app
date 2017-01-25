@@ -1,3 +1,4 @@
+
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -26,7 +27,10 @@ export class ShowOnMap {
 
   //function To show map
   loadMap(){
-  	let latLng= new google.maps.LatLng(22.7196,75.8577);
+    if(this.feedObj.lat==undefined || this.feedObj.lat=="" || this.feedObj.lat==null)
+  		var latLng= new google.maps.LatLng(22.7196,75.8577);
+  	else
+  		var latLng=new google.maps.LatLng(this.feedObj.lat,this.feedObj.lng);
 
   	let mapOptions={
   		center:latLng,
