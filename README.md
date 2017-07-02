@@ -20,7 +20,8 @@ Also, Users can extend their help by posting whatever updates they get in their 
 ![App Screenshot](images/mobile.jpg "Mobile Scrrenshot")
 
 ## Video
-<a href="https://www.youtube.com/watch?v=vLsqOS8XkYg" target="_blank"><img src="images/poster.jpg" alt="Youtube Video" width="240" height="180" border="10" /></a>
+
+[![Traffeed Youtube Video](images/poster.jpeg)](https://www.youtube.com/watch?v=vLsqOS8XkYg)
 
 ## How I built it
 This is a hybrid app which is built using Ionic 2 Framework and Cordova Phonegap. Its [Admin panel website](https://github.com/mohitkh7/traffeed-website/) is built using Angular JS and Bootstrap framework and hosted on Github pages. For the database of feeds we have used Google Firebase Database along with AngularFire.
